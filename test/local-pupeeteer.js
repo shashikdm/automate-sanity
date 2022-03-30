@@ -1,6 +1,10 @@
 'use strict';
 const { strict } = require('once');
 const puppeteer = require('puppeteer');
+const moment = require('moment');
+const os = require('os');
+
+
 const expect = require('chai').expect;
 (async () => {
     const caps = {
@@ -8,7 +12,7 @@ const expect = require('chai').expect;
         'browser_version': 'latest',
         'os': 'os x',
         'os_version': 'big sur',
-        'build': 'puppeteer-build-1',
+        'build': `[${moment().format('YYYY-MM-DD, h:mm:ss a')}] local-pupeeteer [FROM-${os.hostname()}]`,
         'name': 'My first Puppeteer test',
         'browserstack.username': process.env.BS_USERNAME || 'YOUR_USERNAME',
         'browserstack.accessKey': process.env.BS_ACCESS_KEY || 'YOUR_ACCESS_KEY'

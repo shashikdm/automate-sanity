@@ -2,6 +2,8 @@ const fs = require('fs')
 const moment = require('moment');
 const { env } = require('process');
 const http = require('https');
+const os = require('os');
+
 
 
 const fetchBrowsers = async() => {
@@ -38,7 +40,7 @@ if (env.TESTCASES === 'FROM_API_LATEST') {
                 }
             });
 
-        const BUILD_NAME = `[Sanity-Random] [${moment().format('YYYY-MM-DD, h:mm:ss a')}]`;
+        const BUILD_NAME = `[Sanity-Random] [${moment().format('YYYY-MM-DD, h:mm:ss a')}] [FROM-${os.hostname()}]`;
 
         console.log(`Using Latest browser caps from API`)
         let code = fs.readFileSync(`${__dirname}/brief_session.template.js`, { encoding: 'utf8', flag: 'r' })
@@ -65,7 +67,7 @@ if (env.TESTCASES === 'FROM_API_LATEST') {
 
     const caps = require(testSessionCaps);
 
-    const BUILD_NAME = `[Sanity-TestCase] [${moment().format('YYYY-MM-DD, h:mm:ss a')}]`;
+    const BUILD_NAME = `[Sanity-TestCase] [${moment().format('YYYY-MM-DD, h:mm:ss a')}] [FROM-${os.hostname()}]`;
 
     for (var key in caps) {
         caps[key]['build'] = BUILD_NAME;
