@@ -1,0 +1,44 @@
+[
+    {
+        "book": "Dead Poets Society - Movie",
+        "quotes": [
+            {
+                "quote" : "No matter what anybody tells you, words and ideas can change the world.",
+                "who": "John Keating"
+            },
+            {
+                "quote": "There’s a time for daring and there’s a time for caution, and a wise man understands which is called for.",
+                "who": "John Keating"
+            },
+            {
+                "quote": "What will your verse be?",
+                "who": "John Keating"
+            },
+            {
+                "quote": "I went to the woods because I wanted to live deliberately. I wanted to live deep and suck out all the marrow of life. To put to rout all that was not life; and not, when I had come to die, discover that I had not lived.",
+                "who": "Neil Perry"
+            },
+            {
+                "quote": "Carpe diem. Seize the day, boys. Make your lives extraordinary.",
+                "who": "John Keating"
+            }
+        ]
+    },
+    {
+        "book": "Gangs Of Wasseypur - Movie",
+        "quotes": [
+            {
+                "quote": "Beta…Tumse na ho payega!",
+                "who": "Ramadhir singh"
+            },
+            {
+                "quote": "Baap ka, Dada ka, Bhai ka. Sabka badla lega re, tera Faizal.",
+                "who": "Faizal"
+            },
+            {
+                "quote": "Hamara naam hai Perpendicular. Faizal Khan hamare bade bhai hain. Hum aapka dukan lootne aye hain.",
+                "who": "Perpendicular"
+            }
+        ]
+    }
+]

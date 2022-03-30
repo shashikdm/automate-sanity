@@ -1,0 +1,152 @@
+{
+    "iPhoneXS": {
+        "device": "iPhone XS",
+        "realMobile": "true",
+        "os_version": "14",
+        "browserName": "iPhone",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "iPhone6S": {
+        "device": "iPhone 6S",
+        "realMobile": "true",
+        "os_version": "12",
+        "browserName": "iPhone",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "GooglePixel6": {
+        "device": "Google Pixel 6",
+        "realMobile": "true",
+        "os_version": "12.0",
+        "browserName": "Android",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "Windows10Chrome90": {
+        "os_version": "10",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "90.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "BigSurSafari": {
+        "os_version": "Big Sur",
+        "resolution": "1920x1080",
+        "browserName": "Safari",
+        "os": "OS X",
+        "browserstack.seleniumLogs": "true",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "CatalinaSafari": {
+        "os_version": "Catalina",
+        "resolution": "1920x1080",
+        "browserName": "Safari",
+        "os": "OS X",
+        "browserstack.seleniumLogs": "false",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "MojaveSafari": {
+        "os_version": "Mojave",
+        "resolution": "1920x1080",
+        "browserName": "Safari",
+        "os": "OS X",
+        "browserstack.console": "disable",
+        "browserstack.seleniumLogs": "true",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "HighSierraChrome": {
+        "os_version": "High Sierra",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "os": "OS X",
+        "browserstack.console": "verbose",
+        "browserstack.seleniumLogs": "true",
+        "browserstack.debug": "true"
+    },
+    "Windows11Chrome90": {
+        "os_version": "11",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "90.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "Windows8.1Chrome90": {
+        "os_version": "8.1",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "90.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "Windows8Chrome90": {
+        "os_version": "8",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "90.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "Windows7Chrome90": {
+        "os_version": "7",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "48.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "WindowsXPChrome48": {
+        "os_version": "XP",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "48.0",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "iPhoneXSIdleTimeoutCase": {
+        "device": "iPhone XS",
+        "realMobile": "true",
+        "os_version": "14",
+        "browserName": "iPhone",
+        "browserstack.idleTimeout": 10,
+        "shouldIdleTimeout": true,
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
+    "WindowsXPChrome48IdleTimeoutCase": {
+        "os_version": "XP",
+        "resolution": "1920x1080",
+        "browserName": "Chrome",
+        "browser_version": "48.0",
+        "os": "Windows",
+        "browserstack.idleTimeout": 10,
+        "shouldIdleTimeout": true,
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "SamsungGalaxyS20": {
+        "device": "Samsung Galaxy S20",
+        "realMobile": "true",
+        "os_version": "10.0",
+        "browserName": "Android",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    }
+}
