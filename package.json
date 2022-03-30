@@ -21,6 +21,7 @@
     "sanity-ssh-tunnel": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:9992 jest -w=15",
     "sanity-207.254.56.19-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=207.254.56.19 jest -w=15",
     "sanity-207.254.56.5-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=207.254.56.5 jest -w=15",
+    "sanity-local-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:8080 jest -w=15",
     "sanity-local-pup": "node test/local-pupeeteer.js"
   },
   "author": "Dinesh Sawant",
