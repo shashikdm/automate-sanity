@@ -148,5 +148,15 @@
         "browserstack.console": "verbose",
         "browserstack.debug": "true",
         "browserstack.networkLogs": "true"
+    },
+    "YosemiteSafari": {
+        "os_version": "Yosemite",
+        "resolution": "1920x1080",
+        "browserName": "Safari",
+        "os": "OS X",
+        "browserstack.seleniumLogs": "true",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
     }
 }
