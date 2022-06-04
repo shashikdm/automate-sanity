@@ -1,4 +1,22 @@
 {
+    "Windows10FirefoxLatest": {
+        "os" : "Windows",
+        "os_version" : "10",
+        "browserName" : "Firefox",
+        "browser_version" : "latest",
+        "browserstack.local" : "false",
+        "browserstack.selenium_version" : "3.10.0",
+        "browserstack.console":"errors"
+    },
+    "Windows8.1FirefoxLatest": {
+        "os_version": "8.1",
+        "resolution": "1920x1080",
+        "browserName": "Firefox",
+        "browser_version": "latest",
+        "os": "Windows",
+        "browserstack.console": "verbose",
+        "browserstack.debug": "true"
+    },
     "iPhoneXS": {
         "device": "iPhone XS",
         "realMobile": "true",
