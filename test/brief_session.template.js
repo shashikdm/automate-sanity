@@ -173,7 +173,11 @@ describe(`${session_key} Session`, function() {
                     })
             })
             for (let index = 0; index < consoleLogCount; index++) {
-                expect(consoleLogs).toContain(`Console Log ${index}`);
+                if (session_cap.browserName === "Firefox") {
+                    expect(consoleLogs).toContain(`No messages were logged in this Session`);
+                } else {
+                    expect(consoleLogs).toContain(`Console Log ${index}`);
+                }
             }
         }, 60000)
     }
