@@ -20,7 +20,8 @@
     "sanity-all-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=103.126.7.240 jest -w=15 && HUB_URL=185.44.131.206 jest -w=15 && HUB_URL=207.254.8.5 jest -w=15 && HUB_URL=173.234.104.2 jest -w=15 && HUB_URL=207.254.56.9 jest -w=15",
     "sanity-ssh-tunnel": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:9992 jest -w=15",
     "sanity-local-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:8080 jest -w=15",
-    "sanity-local-pup": "node test/local-pupeeteer.js"
+    "sanity-local-pup": "node test/local-pupeeteer.js",
+    "sanity-custom-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && jest -w=15"
   },
   "author": "Dinesh Sawant",
   "license": "UNLICENSED",
