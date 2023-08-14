@@ -4,7 +4,7 @@
         "os_version" : "10",
         "browserName" : "Firefox",
         "browser_version" : "latest",
-        "browserstack.local" : "false",
+        "browserstack.local" : "true",
         "browserstack.selenium_version" : "3.10.0",
         "browserstack.console":"errors"
     },

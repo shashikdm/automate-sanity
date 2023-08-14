@@ -45,6 +45,12 @@ describe(`${session_key} Session`, function() {
         // Wait for sometime
         await new Promise(resolve => setTimeout(resolve, 3000));
 
+        if (session_cap['browserstack.local']) {
+            await driver.get('http://localhost:45454');
+            const title = await driver.getTitle();
+            assert(title == "BrowserStack Local");
+        }
+
         if (session_cap.shouldIdleTimeout) {
             return;
         }

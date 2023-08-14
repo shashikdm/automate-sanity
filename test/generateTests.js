@@ -3,8 +3,15 @@ const moment = require('moment');
 const { env } = require('process');
 const http = require('https');
 const os = require('os');
+const browserstack = require('browserstack-local');
 
+const bsLocal = new browserstack.Local();
 
+const bsLocalArgs = { key: process.env.BS_ACCESS_KEY, force: true };
+
+bsLocal.start(bsLocalArgs, () => {
+    console.log('Started Local');
+});
 
 const fetchBrowsers = async() => {
     let data = await new Promise((resolve) => {
