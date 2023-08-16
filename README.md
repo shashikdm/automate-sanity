@@ -9,9 +9,3 @@
 
 # Add more tests
 - Update `test/brief_session_caps.json`
-
-# TODO
-## Generic hostname from CLI
-## Test local, video, networklogs all
-## Add project
-## New combinations

@@ -205,6 +205,7 @@ describe(`${session_key} Session`, function() {
         }, 60000)
     } else {
         test(`Should have seleniumLogs`, async() => {
+            await new Promise(resolve => setTimeout(resolve, 10000));
             let seleniumLogs = await new Promise(resolve => {
                 http.get(
                     `https://api.browserstack.com/automate/sessions/${sessionObj.getId()}/seleniumlogs`, {
@@ -212,10 +213,62 @@ describe(`${session_key} Session`, function() {
                     }, response => {
                         let data = '';
                         response.on('data', _data => (data += _data));
-                        response.on('end', () => resolve(data));
+                        response.on('end', () => resolve({
+                            data,
+                            statusCode: response.statusCode
+                        }));
                     })
             })
-            expect(seleniumLogs.length).toBeGreaterThan(0)
-        }, 30000)
+            let appiumLogs = await new Promise(resolve => {
+                http.get(
+                    `https://api.browserstack.com/automate/sessions/${sessionObj.getId()}/appiumlogs`, {
+                        headers: { 'Authorization': 'Basic ' + Buffer.from(process.env.BS_USERNAME + ':' + process.env.BS_ACCESS_KEY).toString('base64') }
+                    }, response => {
+                        let data = '';
+                        response.on('data', _data => (data += _data));
+                        response.on('end', () => resolve({
+                            data,
+                            statusCode: response.statusCode
+                        }));
+                    })
+            })
+            expect(appiumLogs.statusCode == 200 || seleniumLogs.statusCode == 200)
+            expect(appiumLogs.data.length).toBeGreaterThan(0)
+            expect(seleniumLogs.data.length).toBeGreaterThan(0)
+        }, 60000)
     }
+
+    test(`Should have video`, async() => {
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        let sessionJson = await new Promise(resolve => {
+            http.get(
+                `https://api.browserstack.com/automate/sessions/${sessionObj.getId()}.json`, {
+                    headers: { 'Authorization': 'Basic ' + Buffer.from(process.env.BS_USERNAME + ':' + process.env.BS_ACCESS_KEY).toString('base64') }
+                }, response => {
+                    let data = '';
+                    response.on('data', _data => (data += _data));
+                    response.on('end', () => resolve(data));
+                })
+        })
+        sessionJson = JSON.parse(sessionJson);
+        console.log("LUFFY", sessionJson);
+        console.log("ZORO", sessionJson.automation_session);
+        console.log("SANJI", sessionJson.automation_session.video_url);
+        let video = await new Promise(resolve => {
+            http.get(
+                sessionJson.automation_session.video_url, {
+                    headers: { 'Authorization': 'Basic ' + Buffer.from(process.env.BS_USERNAME + ':' + process.env.BS_ACCESS_KEY).toString('base64') }
+                }, response => {
+                    let data = '';
+                    response.on('data', _data => (data += _data));
+                    response.on('end', () => resolve({
+                        data,
+                        statusCode: response.statusCode
+                    }));
+                })
+        })
+        expect(video.statusCode == 200)
+        expect(video.data.length).toBeGreaterThan(0)
+    }, 60000)
+
 });

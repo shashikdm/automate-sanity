@@ -1,2 +1,5 @@
 test/generated/*.test.js
 node_modules
+local.log
+browserstack.err
+.DS_Store

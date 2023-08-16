@@ -4,23 +4,6 @@
   "description": "Sanity Project for Automate",
   "main": "index.js",
   "scripts": {
-    "sanity-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-cloud.browserstack.com jest -w=15",
-    "sanity-aps": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-aps.browserstack.com jest -w=15",
-    "sanity-k8s-aps": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-dc-aps1a-1.browserstack.com jest -w=15",
-    "sanity-euw": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-euw.browserstack.com jest -w=15",
-    "sanity-use": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-use.browserstack.com jest -w=15",
-    "sanity-apse": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-apse.browserstack.com jest -w=15",
-    "sanity-usw": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-usw.browserstack.com jest -w=15",
-    "sanity-all": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=hub-aps.browserstack.com jest -w=15 && HUB_URL=hub-euw.browserstack.com jest -w=15 && HUB_URL=hub-use.browserstack.com jest -w=15 && HUB_URL=hub-apse.browserstack.com jest -w=15 && HUB_URL=hub-usw.browserstack.com jest -w=15",
-    "sanity-aps-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=103.126.7.240 jest -w=15",
-    "sanity-euw-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=185.44.131.206 jest -w=15",
-    "sanity-use-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=207.254.8.5 jest -w=15",
-    "sanity-apse-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=173.234.104.2 jest -w=15",
-    "sanity-usw-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=207.254.56.9 jest -w=15",
-    "sanity-all-nginx": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=103.126.7.240 jest -w=15 && HUB_URL=185.44.131.206 jest -w=15 && HUB_URL=207.254.8.5 jest -w=15 && HUB_URL=173.234.104.2 jest -w=15 && HUB_URL=207.254.56.9 jest -w=15",
-    "sanity-ssh-tunnel": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:9992 jest -w=15",
-    "sanity-local-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && HUB_URL=localhost:8080 jest -w=15",
-    "sanity-local-pup": "node test/local-pupeeteer.js",
     "sanity-custom-hub": "rm -rf test/generated/*.test.js && node test/generateTests.js && jest -w=15"
   },
   "author": "Dinesh Sawant",
@@ -30,9 +13,6 @@
     "selenium-webdriver": "^4.1.1",
     "browserstack-local": "^1.4.8",
     "chai": "^4.3.4",
-    "puppeteer": "^8.0.0"
-  },
-  "devDependencies": {
     "jest": "^27.4.7"
   }
 }
